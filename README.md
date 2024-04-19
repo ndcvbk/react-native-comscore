@@ -14,39 +14,57 @@ yarn add react-native-comscore
 ```
 ## Usage
 ### Initialization
-To initialize ComScore in your application, you need to provide your ComScore publisher ID. Additionally, you can include optional parameters such as the application name, usage properties auto-update mode, and auto-update interval.
+To initialize ComScore in your application, you need to provide your ComScore publisher ID. Additionally, you can include optional parameters such as the application name, usage properties auto-update mode, auto-update interval and 1P data.
+##### Parameters:
+- ****publisherId****: (required) Your ComScore publisher ID.
+- ****applicationName****: (optional) The name of your application.
+- ****usagePropertiesAutoUpdateMode****: (optional) The mode for updating properties (_FOREGROUND_ONLY_, _FOREGROUND_AND_BACKGROUND_, _DISABLED_).
+- ****usagePropertiesAutoUpdateInterval****: (optional) The interval for usage properties (in seconds).
+- ****data_1p****: (optional) An object containing 1P data:
+--- ****cs_fpid****: The first-party ID associated with the user.
+--- ****cs_fpdm****: The first-party data metadata.
+--- ****cs_fpit****: The first-party ID type.
+--- ****cs_fpdt****: The first-party data type.
 ```
 import ComScore from 'react-native-comscore';
 
-ComScore.initializeComScore({
+const params = {
   publisherId: 'YOUR_PUBLISHER_ID',
   applicationName: 'YourApplicationName',
   usagePropertiesAutoUpdateMode: 'FOREGROUND_ONLY',
   usagePropertiesAutoUpdateInterval: 60,
-  // Add more optional parameters as needed...
-});
-``` 
+  data_1p: {
+    cs_fpid: 'your_cs_fpid_value',
+    cs_fpdm: 'your_cs_fpdm_value',
+    cs_fpit: 'your_cs_fpit_value',
+    cs_fpdt: 'your_cs_fpdt_value',
+  },
+};
 
-## Tracking Navigation
+ComScore.initializeComScore(params);
+``` 
+Initialize ComScore with your publisher ID and other optional parameters to start tracking analytics for your React Native application.
+
+### Tracking Navigation
 Track user navigation and page views within your application by calling the ***trackNavigation*** method and providing the page name.
 ```
 ComScore.trackNavigation('PageName');
 ```
 
-## Updating Consent
+### Updating Consent
 Easily update the user consent status for ComScore tracking using the ***updateConsent*** method. Provide your publisher ID and the consent value.
 ```
 ComScore.updateConsent('YOUR_PUBLISHER_ID', 'consentValue');
 ```
 
-## Updating 1P Data
+### Updating 1P Data
 Use the ***updateData1P*** function to update additional first-party data (1P data) associated with your ComScore tracking.
-#### Parameters
-- **publisherId**: (required) Your ComScore publisher ID.
-- **cs_fpid**: The first-party ID associated with the user.
-- **cs_fpdm**: The first-party data metadata.
-- **cs_fpit**: The first-party ID type.
-- **cs_fpdt**: The first-party data type.
+##### Parameters
+- ****publisherId****: (required) Your ComScore publisher ID.
+- ****cs_fpid****: The first-party ID associated with the user.
+- ****cs_fpdm****: The first-party data metadata.
+- ****cs_fpit****: The first-party ID type.
+- ****cs_fpdt****: The first-party data type.
 ```
 import ComScore from 'react-native-comscore';
 
