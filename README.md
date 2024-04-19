@@ -57,6 +57,9 @@ Initialize ComScore with your publisher ID and other optional parameters to star
 ### Tracking Navigation
 Track user navigation and page views within your application by calling the ***trackScreen*** method and providing the page name.
 ```
+import ComScore from 'react-native-comscore';
+
+// Example usage:
 ComScore.trackScreen('PageName');
 ```
 
