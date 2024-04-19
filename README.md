@@ -95,6 +95,25 @@ ComScore.updateData1P({
 ```
 This function allows you to dynamically update relevant first-party data points associated with your ComScore analytics, providing insights into user behavior and engagement. Ensure to include your ComScore publisher ID and any relevant data points you wish to update.
 
+## Function Parameters
+| Function              | Parameter                             | Type                           | Default Value | Description                                                                              |
+|-----------------------|---------------------------------------|--------------------------------|---------------|------------------------------------------------------------------------------------------|
+| `initializeComscore`  | `params`                              | `ComScoreParams`               | -             | Initializes ComScore analytics with the provided parameters.                              |
+|                       | `publisherId`                         | `string`                       | -             | Your ComScore publisher ID.                                                              |
+|                       | `applicationName`                    | `string \| undefined`          | `undefined`   | The name of your application.                                                            |
+|                       | `usagePropertiesAutoUpdateMode`      | `string \| undefined`          | `undefined`   | The mode for updating usage properties (FOREGROUND_ONLY, FOREGROUND_AND_BACKGROUND, DISABLED).|
+|                       | `usagePropertiesAutoUpdateInterval`  | `number \| undefined`          | `undefined`   | The interval for updating usage properties (in seconds).                                  |
+|                       | `data_1p`                            | `Data1p \| undefined`          | `undefined`   | An object containing 1P data.                                                             |
+| `trackScreen`         | `screenName`                         | `string`                       | -             | Tracks the screen with the provided screen name.                                          |
+| `updateConsent`       | `consentState`                       | `string`                       | -             | Updates the consent state for ComScore tracking.                                          |
+| `updateData1P`        | `params`                             | `Data1p`                       | -             | Updates additional first-party data (1P data) associated with ComScore tracking.          |
+|                       | `publisherId`                        | `string \| undefined`          | `undefined`   | Your ComScore publisher ID.                                                              |
+|                       | `cs_fpid`                            | `string \| undefined`          | `undefined`   | The first-party ID associated with the user.                                              |
+|                       | `cs_fpdm`                            | `string \| undefined`          | `undefined`   | The first-party data metadata.                                                            |
+|                       | `cs_fpit`                            | `string \| undefined`          | `undefined`   | The first-party ID type.                                                                  |
+|                       | `cs_fpdt`                            | `string \| undefined`          | `undefined`   | The first-party data type.                                                                |
+
+
 ## License
 This project is open-source.
 ## Contributing
