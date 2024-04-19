@@ -7,7 +7,7 @@
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "scripts": {
-    "example": "yarn workspace react-native-comscore-example",
+    "example": "yarn --cwd example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
