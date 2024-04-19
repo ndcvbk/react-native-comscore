@@ -98,20 +98,19 @@ This function allows you to dynamically update relevant first-party data points 
 ## Function Parameters
 | Function              | Parameter                             | Type                           | Required      | Default Value | Description                                                                              |
 |-----------------------|---------------------------------------|--------------------------------|---------------|---------------|------------------------------------------------------------------------------------------|
-| `initializeComscore`  | `params`                              | `ComScoreParams`               | Yes           | -             | Initializes ComScore analytics with the provided parameters.                              |
-|                       | `publisherId`                         | `string`                       | Yes           | -             | Your ComScore publisher ID.                                                              |
+| `initializeComscore`  | `publisherId`                         | `string`                       | Yes           | -             | Your ComScore publisher ID.                                                              |
 |                       | `applicationName`                    | `string \| undefined`          | No            | `undefined`   | The name of your application.                                                            |
 |                       | `usagePropertiesAutoUpdateMode`      | `string \| undefined`          | No            | `undefined`   | The mode for updating usage properties (FOREGROUND_ONLY, FOREGROUND_AND_BACKGROUND, DISABLED).|
 |                       | `usagePropertiesAutoUpdateInterval`  | `number \| undefined`          | No            | `undefined`   | The interval for updating usage properties (in seconds).                                  |
 |                       | `data_1p`                            | `Data1p \| undefined`          | No            | `undefined`   | An object containing 1P data.                                                             |
 | `trackScreen`         | `screenName`                         | `string`                       | Yes           | -             | Tracks the screen with the provided screen name.                                          |
 | `updateConsent`       | `consentState`                       | `string`                       | Yes           | -             | Updates the consent state for ComScore tracking.                                          |
-| `updateData1P`        | `params`                             | `Data1p`                       | Yes           | -             | Updates additional first-party data (1P data) associated with ComScore tracking.          |
-|                       | `publisherId`                        | `string \| undefined`          | No            | `undefined`   | Your ComScore publisher ID.                                                              |
+| `updateData1P`        | `publisherId`                        | `string \| undefined`          | No            | `undefined`   | Your ComScore publisher ID.                                                              |
 |                       | `cs_fpid`                            | `string \| undefined`          | No            | `undefined`   | The first-party ID associated with the user.                                              |
 |                       | `cs_fpdm`                            | `string \| undefined`          | No            | `undefined`   | The first-party data metadata.                                                            |
 |                       | `cs_fpit`                            | `string \| undefined`          | No            | `undefined`   | The first-party ID type.                                                                  |
 |                       | `cs_fpdt`                            | `string \| undefined`          | No            | `undefined`   | The first-party data type.                                                                |
+
 
 
 ## License
