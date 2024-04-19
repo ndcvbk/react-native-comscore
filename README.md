@@ -30,10 +30,10 @@ To initialize ComScore in your application, you need to provide your ComScore pu
 - ****usagePropertiesAutoUpdateMode****: (optional) The mode for updating properties (_FOREGROUND_ONLY_, _FOREGROUND_AND_BACKGROUND_, _DISABLED_).
 - ****usagePropertiesAutoUpdateInterval****: (optional) The interval for usage properties (in seconds).
 - ****data_1p****: (optional) An object containing 1P data:
-    - ****cs_fpid****: The first-party ID associated with the user.
-    - ****cs_fpdm****: The first-party data metadata.
-    - ****cs_fpit****: The first-party ID type.
-    - ****cs_fpdt****: The first-party data type.
+    - ****cs_fpid****: (optional) The first-party ID associated with the user.
+    - ****cs_fpdm****: (optional) The first-party data metadata.
+    - ****cs_fpit****: (optional) The first-party ID type.
+    - ****cs_fpdt****: (optional) The first-party data type.
 ```
 import ComScore from 'react-native-comscore';
 
@@ -55,16 +55,20 @@ ComScore.initializeComScore(params);
 Initialize ComScore with your publisher ID and other optional parameters to start tracking analytics for your React Native application.
 
 ### Tracking Navigation
-Track user navigation and page views within your application by calling the ***trackNavigation*** method and providing the page name.
+Track user navigation and page views within your application by calling the ***trackScreen*** method and providing the page name.
 ```
-ComScore.trackNavigation('PageName');
+ComScore.trackScreen('PageName');
 ```
 
 ### Updating Consent
-Easily update the user consent status for ComScore tracking using the ***updateConsent*** method. Provide your publisher ID and the consent value.
+Easily update the user consent status for ComScore tracking using the updateConsent method. Provide the consent value to be updated.
 ```
-ComScore.updateConsent('YOUR_PUBLISHER_ID', 'consentValue');
+import ComScore from 'react-native-comscore';
+
+// Example usage:
+ComScore.updateConsent('consentValue');
 ```
+This method allows you to dynamically update the consent status for ComScore tracking within your React Native application.
 
 ### Updating 1P Data
 Use the ***updateData1P*** function to update additional first-party data (1P data) associated with your ComScore tracking.
@@ -93,6 +97,7 @@ This project is open-source.
 ## Contributing
 
 Contributors:
+- [Hardik Mashru](https://github.com/harrymash2006)
 - [Yusuf Sham](https://github.com/yusufsham)
 - [Chandan Dass](https://github.com/chandandass)
   
