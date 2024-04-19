@@ -21,10 +21,10 @@ To initialize ComScore in your application, you need to provide your ComScore pu
 - ****usagePropertiesAutoUpdateMode****: (optional) The mode for updating properties (_FOREGROUND_ONLY_, _FOREGROUND_AND_BACKGROUND_, _DISABLED_).
 - ****usagePropertiesAutoUpdateInterval****: (optional) The interval for usage properties (in seconds).
 - ****data_1p****: (optional) An object containing 1P data:
---- ****cs_fpid****: The first-party ID associated with the user.
---- ****cs_fpdm****: The first-party data metadata.
---- ****cs_fpit****: The first-party ID type.
---- ****cs_fpdt****: The first-party data type.
+    - ****cs_fpid****: The first-party ID associated with the user.
+    - ****cs_fpdm****: The first-party data metadata.
+    - ****cs_fpit****: The first-party ID type.
+    - ****cs_fpdt****: The first-party data type.
 ```
 import ComScore from 'react-native-comscore';
 
