@@ -1,5 +1,5 @@
-import { NativeModules } from "react-native";
-import type { ComScoreParams, Data1p } from "./utility/type";
+import { NativeModules } from 'react-native';
+import type { ComScoreParams, Data1p } from './utility/type';
 const { ComScoreModule } = NativeModules;
 
 export async function initializeComscore(params: ComScoreParams) {
@@ -28,9 +28,9 @@ export async function initializeComscore(params: ComScoreParams) {
 
     await ComScoreModule.initializeComScore(comScoreParams);
 
-    console.log("comScoreInitialized");
+    console.log('comScoreInitialized');
   } catch (e) {
-    console.log("Error in initializing comscore", e);
+    console.log('Error in initializing comscore', e);
   }
 }
 
@@ -39,7 +39,7 @@ export async function trackScreen(screenName: String) {
     if (screenName === undefined) return;
     await ComScoreModule.trackScreen(screenName);
   } catch (e) {
-    console.log("error in trackScreen : ", e);
+    console.log('error in trackScreen : ', e);
   }
 }
 
@@ -47,7 +47,7 @@ export async function updateConsent(consentState: string) {
   try {
     await ComScoreModule.updateConsent(consentState);
   } catch (e) {
-    console.log("Error in updateConsent", e);
+    console.log('Error in updateConsent', e);
   }
 }
 
@@ -57,7 +57,7 @@ export async function updateData1P(params: Data1p) {
   if (params.publisherId !== undefined) {
     updatedData1p.publisherId = params.publisherId;
   } else {
-    return console.error("PublisherId is required!");
+    return console.error('PublisherId is required!');
   }
 
   if (params.cs_fpid !== undefined) {
