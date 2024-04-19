@@ -1,4 +1,5 @@
 # react-native-comscore
+
 ## Description
 `react-native-comscore` is a React Native package designed to seamlessly integrate ComScore analytics into your React Native applications. ComScore provides valuable insights into user behavior and engagement, allowing you to make informed decisions to improve your app's performance and user experience.
 
@@ -126,3 +127,4 @@ We welcome contributions from the community to improve `react-native-comscore`. 
 
 ## Acknowledgments
 This package is based on [ComScore](https://www.comscore.com/), a leading provider of digital audience measurement and analytics.
+
