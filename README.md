@@ -89,6 +89,13 @@ ComScore.updateData1P({
 This function allows you to dynamically update relevant first-party data points associated with your ComScore analytics, providing insights into user behavior and engagement. Ensure to include your ComScore publisher ID and any relevant data points you wish to update.
 
 ## License
+This project is open-source.
 ## Contributing
+
+Contributors:
+- [Yusuf Sham](https://github.com/yusufsham)
+- [Chandan Dass](https://github.com/chandandass)
+We welcome contributions from the community to improve `react-native-comscore`. If you'd like to contribute, please feel free to submit a pull request with your changes or open an issue with any suggestions or bug reports. Your contributions are greatly appreciated!
+
 ## Acknowledgments
 This package is based on [ComScore](https://www.comscore.com/), a leading provider of digital audience measurement and analytics.
