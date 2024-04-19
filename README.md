@@ -3,15 +3,24 @@
 `react-native-comscore` is a React Native package designed to seamlessly integrate ComScore analytics into your React Native applications. ComScore provides valuable insights into user behavior and engagement, allowing you to make informed decisions to improve your app's performance and user experience.
 
 ## Installation
-To install `react-native-comscore`, you can use npm or yarn. Run one of the following commands in your project directory:
-
+To install `react-native-comscore` from GitHub, you can follow these steps:
+1. Clone the GitHub repository to your local machine:
 ```
-npm install react-native-comscore
+ git clone https://github.com/dev-codesymphony/react-native-comscore.git
+``` 
+2. Navigate to the cloned repository directory:
+```
+ cd react-native-comscore
+```
+3. Install the package dependencies:
+```
+npm install
 ``` 
 or
 ```
-yarn add react-native-comscore
+yarn add
 ```
+
 ## Usage
 ### Initialization
 To initialize ComScore in your application, you need to provide your ComScore publisher ID. Additionally, you can include optional parameters such as the application name, usage properties auto-update mode, auto-update interval and 1P data.
