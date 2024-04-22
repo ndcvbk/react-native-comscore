@@ -29,7 +29,7 @@ To initialize ComScore in your application, you need to provide your ComScore pu
     - ****cs_fpit****: (optional) The first-party ID type.
     - ****cs_fpdt****: (optional) The first-party data type.
 ```
-import ComScore from 'react-native-comscore';
+import Comscore from 'react-native-comscore';
 
 const params = {
   publisherId: 'YOUR_PUBLISHER_ID',
