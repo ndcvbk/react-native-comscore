@@ -7,19 +7,12 @@
 To install `react-native-comscore` from GitHub, you can follow these steps:
 1. Clone the GitHub repository to your local machine:
 ```
- git clone https://github.com/dev-codesymphony/react-native-comscore.git
+ yarn install https://github.com/dev-codesymphony/react-native-Comscore.git
 ``` 
-2. Navigate to the cloned repository directory:
+
+OR 
 ```
- cd react-native-comscore
-```
-3. Install the package dependencies:
-```
-npm install
-``` 
-or
-```
-yarn add
+ npm install https://github.com/dev-codesymphony/react-native-Comscore.git
 ```
 
 ## Usage
@@ -51,7 +44,7 @@ const params = {
   },
 };
 
-ComScore.initializeComScore(params);
+Comscore.initializeComScore(params);
 ``` 
 Initialize ComScore with your publisher ID and other optional parameters to start tracking analytics for your React Native application.
 
@@ -61,7 +54,7 @@ Track user navigation and page views within your application by calling the ***t
 import ComScore from 'react-native-comscore';
 
 // Example usage:
-ComScore.trackScreen('PageName');
+Comscore.trackScreen('PageName');
 ```
 
 ### Updating Consent
@@ -70,7 +63,7 @@ Easily update the user consent status for ComScore tracking using the updateCons
 import ComScore from 'react-native-comscore';
 
 // Example usage:
-ComScore.updateConsent('consentValue');
+Comscore.updateConsent('consentValue');
 ```
 This method allows you to dynamically update the consent status for ComScore tracking within your React Native application.
 
@@ -86,7 +79,7 @@ Use the ***updateData1P*** function to update additional first-party data (1P da
 import ComScore from 'react-native-comscore';
 
 // Example usage:
-ComScore.updateData1P({
+Comscore.updateData1P({
   publisherId: 'YOUR_PUBLISHER_ID',
   cs_fpid: 'USER_ID',
   cs_fpdm: 'METADATA',
@@ -126,5 +119,5 @@ Contributors:
 We welcome contributions from the community to improve `react-native-comscore`. If you'd like to contribute, please feel free to submit a pull request with your changes or open an issue with any suggestions or bug reports. Your contributions are greatly appreciated!
 
 ## Acknowledgments
-This package is based on [ComScore](https://www.comscore.com/), a leading provider of digital audience measurement and analytics.
+This package is based on [ComScore](https://www.Comscore.com/), a leading provider of digital audience measurement and analytics.
 

@@ -52,8 +52,8 @@ export default class Comscore {
   }
 
   static updateData1P(params) {
+    try {
     let updatedData1p = {};
-
     if (params.publisherId !== undefined) {
       updatedData1p.publisherId = params.publisherId;
     } else {
@@ -77,5 +77,8 @@ export default class Comscore {
     }
 
     ComScoreModule.update1PData(updatedData1p);
+    } catch (e) {
+      console.log('Error in updateConsent', e);
+    }
   }
 }
