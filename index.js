@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 const { ComScoreModule } = NativeModules;
 
-export async function initializeComscore(params) {
+export function initializeComscore(params) {
   try {
     const comScoreParams = {
       publisherId: params.publisherId,
@@ -25,7 +25,7 @@ export async function initializeComscore(params) {
       comScoreParams.data_1p = params.data_1p;
     }
 
-    await ComScoreModule.initializeComScore(comScoreParams);
+    ComScoreModule.initializeComScore(comScoreParams);
 
     console.log('comScoreInitialized');
   } catch (e) {
@@ -33,24 +33,24 @@ export async function initializeComscore(params) {
   }
 }
 
-export async function trackScreen(screenName) {
+export function trackScreen(screenName) {
   try {
     if (screenName === undefined) return;
-    await ComScoreModule.trackScreen(screenName);
+    ComScoreModule.trackScreen(screenName);
   } catch (e) {
     console.log('error in trackScreen : ', e);
   }
 }
 
-export async function updateConsent(consentState) {
+export function updateConsent(consentState) {
   try {
-    await ComScoreModule.updateConsent(consentState);
+    ComScoreModule.updateConsent(consentState);
   } catch (e) {
     console.log('Error in updateConsent', e);
   }
 }
 
-export async function updateData1P(params) {
+export function updateData1P(params) {
   let updatedData1p = {};
 
   if (params.publisherId !== undefined) {
@@ -75,5 +75,5 @@ export async function updateData1P(params) {
     updatedData1p.cs_fpdt = params.cs_fpdt;
   }
 
-  await ComScoreModule.update1PData(updatedData1p);
+  ComScoreModule.update1PData(updatedData1p);
 }
