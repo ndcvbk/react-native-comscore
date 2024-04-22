@@ -5,7 +5,7 @@
 
 ## Installation
 To install `react-native-comscore` from GitHub, you can follow these steps:
-1. Clone the GitHub repository to your local machine:
+
 ```
  yarn install https://github.com/dev-codesymphony/react-native-Comscore.git
 ``` 
