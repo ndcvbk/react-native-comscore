@@ -51,7 +51,7 @@ Initialize ComScore with your publisher ID and other optional parameters to star
 ### Tracking Navigation
 Track user navigation and page views within your application by calling the ***trackScreen*** method and providing the page name.
 ```
-import ComScore from 'react-native-comscore';
+import Comscore from 'react-native-comscore';
 
 // Example usage:
 Comscore.trackScreen('PageName');
@@ -60,7 +60,7 @@ Comscore.trackScreen('PageName');
 ### Updating Consent
 Easily update the user consent status for ComScore tracking using the updateConsent method. Provide the consent value to be updated.
 ```
-import ComScore from 'react-native-comscore';
+import Comscore from 'react-native-comscore';
 
 // Example usage:
 Comscore.updateConsent('consentValue');
@@ -76,7 +76,7 @@ Use the ***updateData1P*** function to update additional first-party data (1P da
 - ****cs_fpit****: The first-party ID type.
 - ****cs_fpdt****: The first-party data type.
 ```
-import ComScore from 'react-native-comscore';
+import Comscore from 'react-native-comscore';
 
 // Example usage:
 Comscore.updateData1P({
