@@ -37,21 +37,18 @@ declare class Comscore {
    *               - usagePropertiesAutoUpdateMode?: The auto-update mode for usage properties (optional).
    *               - usagePropertiesAutoUpdateInterval?: The interval for auto-updating usage properties (optional).
    *               - data_1p?: First-party data parameters (optional).
-   * @returns A Promise that resolves when ComScore is initialized successfully.
    */
   static initializeComscore(params: ComScoreParams): void;
 
   /**
    * Tracks a screen with the given screen name.
    * @param screenName The name of the screen to track.
-   * @returns A Promise that resolves when the screen tracking is completed successfully.
    */
   static trackScreen(screenName: string): void;
 
   /**
    * Updates the consent state.
    * @param consentState The new consent state.
-   * @returns A Promise that resolves when the consent state is updated successfully.
    */
   static updateConsent(consentState: string): void;
 
@@ -63,7 +60,6 @@ declare class Comscore {
    *               - cs_fpit?: First-party ID timestamp (optional).
    *               - cs_fpdm?: First-party ID domain (optional).
    *               - cs_fpdt?: First-party ID TTL (Time To Live) (optional).
-   * @returns A Promise that resolves when the first-party data parameters are updated successfully.
    */
   static updateData1P(params: Data1p): void;
 }
