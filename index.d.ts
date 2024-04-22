@@ -64,4 +64,4 @@ declare class Comscore {
   static updateData1P(params: Data1p): void;
 }
 
-export = Comscore;
+export default Comscore;
