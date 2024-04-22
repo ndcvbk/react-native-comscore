@@ -1,4 +1,4 @@
-declare module 'comscore-react-native' {
+export declare module 'comscore-react-native' {
   /**
    * Enum representing the auto-update modes for usage properties.
    */
