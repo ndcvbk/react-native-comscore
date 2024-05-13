@@ -15,6 +15,9 @@ OR
  npm install https://github.com/dev-codesymphony/react-native-Comscore.git
 ```
 
+## iOS optional requirement
+It is advisable to add **AddSupport.framework** to your project target(s) even if the application does not contain advertisements because this enables the Comscore library to collect the **advertisingIdentifier** value for estimating the number of unique users for audience research purposes.
+
 ## Usage
 ### Initialization
 To initialize ComScore in your application, you need to provide your ComScore publisher ID. Additionally, you can include optional parameters such as the application name, usage properties auto-update mode, auto-update interval and 1P data.
