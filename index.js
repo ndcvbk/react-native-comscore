@@ -43,6 +43,16 @@ export default class Comscore {
     }
   }
 
+  static trackScreenWithData(screenName, data) {
+    try {
+      if (screenName === undefined) return;
+      ComScoreModule.trackScreenWithData(screenName, data);
+    } catch (e) {
+      console.log('error in trackScreen : ', e);
+    }
+  }
+
+
   static updateConsent(consentState) {
     try {
       ComScoreModule.updateConsent(consentState);

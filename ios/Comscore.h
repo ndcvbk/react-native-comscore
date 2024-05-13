@@ -1,12 +1,12 @@
 
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "RNComscoreSpec.h"
-
-@interface Comscore : NSObject <NativeComscoreSpec>
-#else
+#if __has_include(<React/RCTBridgeModule.h>)
 #import <React/RCTBridgeModule.h>
-
-@interface Comscore : NSObject <RCTBridgeModule>
+#elif __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#else
+#import "React/RCTBridgeModule.h"
 #endif
+
+@interface ComScoreModule : NSObject <RCTBridgeModule>
 
 @end

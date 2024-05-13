@@ -1,7 +1,6 @@
 require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
-folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32'
 
 Pod::Spec.new do |s|
   s.name         = "react-native-comscore"
@@ -15,7 +14,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/dev-codesymphony/react-native-comscore/react-native-comscore.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
-
+  s.dependency 'ComScore', '~> 6.0'
+  s.dependency 'AdSupport'
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
   # See https://github.com/facebook/react-native/blob/febf6b7f33fdb4904669f99d795eba4c0f95d7bf/scripts/cocoapods/new_architecture.rb#L79.
   if respond_to?(:install_modules_dependencies, true)

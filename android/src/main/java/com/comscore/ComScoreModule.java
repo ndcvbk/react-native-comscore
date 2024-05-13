@@ -187,6 +187,31 @@ public class ComScoreModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void trackScreenWithData(String pageName, ReadableMap additionalParams) {
+    if (pageName == null) return;
+    Log.i("ComScoreModule", "trackScreen page name : " + pageName);
+
+    Map<String, String> params = new HashMap<>();
+    params.put("ns_category", pageName);
+
+    // Merge additionalParams into params
+    if (additionalParams != null) {
+      ReadableMapKeySetIterator iterator = additionalParams.keySetIterator();
+      while (iterator.hasNextKey()) {
+        String key = iterator.nextKey();
+        params.put(key, additionalParams.getString(key));
+      }
+    }
+
+    try {
+      Analytics.notifyViewEvent(params);
+      Log.i("ComScoreModule", "notifyViewEvent called successfully: ");
+    } catch (Exception e) {
+      Log.e("ComScoreModule", "Error in trackScreen : ", e);
+    }
+  }
+
+  @ReactMethod
   public void update1PData(ReadableMap params) {
     try {
       if (params == null || !params.hasKey("publisherId")) return;

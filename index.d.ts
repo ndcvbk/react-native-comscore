@@ -46,6 +46,12 @@ declare class Comscore {
    */
   static trackScreen(screenName: string): void;
 
+   /**
+   * Tracks a screen with the given screen name.
+   * @param screenName The name of the screen to track.
+   */
+   static trackScreenWithData(screenName: string, data: { [key: string]: string }): void;
+
   /**
    * Updates the consent state.
    * @param consentState The new consent state.
