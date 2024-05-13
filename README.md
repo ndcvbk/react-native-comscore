@@ -59,6 +59,7 @@ import Comscore from 'react-native-comscore';
 // Example usages:
 Comscore.trackScreen('PageName');
 
+// Track screen with additional data
 Comscore.trackScreenWithData('PageName', {
   type: 'type',
   action: 'action'
