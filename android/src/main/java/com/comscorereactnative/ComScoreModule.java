@@ -1,4 +1,4 @@
-package com.comscore;
+package com.comscorereactnative;
 
 import android.util.Log;
 import androidx.annotation.NonNull;

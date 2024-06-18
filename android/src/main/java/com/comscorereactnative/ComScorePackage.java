@@ -1,4 +1,4 @@
-package com.comscore;
+package com.comscorereactnative;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
