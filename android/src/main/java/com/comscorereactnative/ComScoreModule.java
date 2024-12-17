@@ -1,7 +1,10 @@
-package com.comscore;
+package com.comscorereactnative;
 
 import android.util.Log;
 import androidx.annotation.NonNull;
+import com.comscore.Analytics;
+import com.comscore.PublisherConfiguration;
+import com.comscore.UsagePropertiesAutoUpdateMode;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

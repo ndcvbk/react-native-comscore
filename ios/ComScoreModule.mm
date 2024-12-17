@@ -81,6 +81,10 @@ RCT_EXPORT_METHOD(initializeComScore:(NSDictionary *)params) {
 }
 
 RCT_EXPORT_METHOD(updateConsent:(NSString *)consentValue) {
+    if (!_publisherId) {
+        RCTLogError(@"ComScoreModule - Error: publisherId is missing.");
+        return;
+    }
     RCTLog(@"ComScoreModule - updateConsent: %@", consentValue);
     @try {
         [((SCORClientConfiguration *) [[SCORAnalytics configuration] publisherConfigurationWithPublisherId:_publisherId]) setPersistentLabelWithName:@"cs_ucfr" value:consentValue];
