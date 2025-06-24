@@ -39,6 +39,7 @@
     "android/build.gradle",
     "android/src/**/*.@(java|xml)",
     "ios/**/*.@(h|m|mm)",
+    "index.d.ts",
     "!scripts"
   ],
   "prettier": {
